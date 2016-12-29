@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
-    <%= csrf_meta_tags %>
+    <title>Saurabh Nitnaware - Developer</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://maxcdn.boostrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	    <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  	<header id="main_navigation" class="clearfix">
+		<a href="home.html" class="name">Saurabh Nitnaware</a>
+		<nav>
+		<%= link_to "Articles", posts_path %>
+		<a href="#">Projects</a>
+		<a href="contact.html">Contact</a>
+		</nav>
+	</header>
     <%= yield %>
   </body>
 </html>
